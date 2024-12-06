@@ -29,9 +29,13 @@
         6 Décembre
       </button>
       <script>
-        const six_douze = new Date("2024-12-06");
+        const six_douze = new Date("2024-12-05");
         const today = new Date();
-        if(six_douze.toDateString() === today.toDateString()){
+        
+        six_douze.setHours(0, 0, 0, 0);
+    	today.setHours(0, 0, 0, 0);
+        
+        if(six_douze >= today){
           document.getElementById("6/12").style.display = "block";
         }
       </script>
