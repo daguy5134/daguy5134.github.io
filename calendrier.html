@@ -12,6 +12,15 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+        .button-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            margin: 5px;
+        }
     </style>
     <body>
       <div>
@@ -23,24 +32,31 @@
         </center>
       </div>
       <hr>
-      <button id="5/12" style="display: none;" onclick="document.getElementById('heading_5/12').style.display = 'block'
-      document.getElementById('text_5/12').style.display = 'block'
-      document.getElementById('hide').style.display = 'block'">
-        5 Décembre
-      </button>
-      <button id="6/12" style="display: none;" onclick="document.getElementById('heading_6/12').style.display = 'block'
-      document.getElementById('text_6/12').style.display = 'block'
-      document.getElementById('hide').style.display = 'block'">
-        6 Décembre
-      </button>
+      <div class="button-container">
+        <button id="5/12" style="display: none;" onclick="document.getElementById('heading_5/12').style.display = 'block'
+        document.getElementById('text_5/12').style.display = 'block'
+        document.getElementById('hide').style.display = 'block'">
+          5 Décembre
+        </button>
+        <button id="6/12" style="display: none;" onclick="document.getElementById('heading_6/12').style.display = 'block'
+        document.getElementById('text_6/12').style.display = 'block'
+        document.getElementById('hide').style.display = 'block'">
+          6 Décembre
+        </button>
+      </div>
       <script>
+        const cinq_douze = new Date("2024-12-05");
         const six_douze = new Date("2024-12-06");
         const today = new Date();
         
+        cinq_douze.setHours(0, 0, 0, 0);
         six_douze.setHours(0, 0, 0, 0);
     	today.setHours(0, 0, 0, 0);
         
-        if(six_douze >= today){
+        if(cinq_douze <= today){
+          document.getElementById("5/12").style.display = "block";
+        }
+        if(six_douze <= today){
           document.getElementById("6/12").style.display = "block";
         }
       </script>
@@ -58,8 +74,11 @@
       </p>
       <button id="hide" style="display: none;" onclick="document.getElementById('heading_6/12').style.display = 'none'
       document.getElementById('text_6/12').style.display = 'none'
+      document.getElementById('hide').style.display = 'none'
+      document.getElementById('heading_5/12').style.display = 'none'
+      document.getElementById('text_5/12').style.display = 'none'
       document.getElementById('hide').style.display = 'none'">
-      	Hide
+      	Cacher
       </button>
     </body>
   </html>
