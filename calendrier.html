@@ -10,8 +10,11 @@
          <h1 style="color:green">Calendrier de l'avent</h1>
         </center>
       </div>
-      <button id="6/12" style="display: none;">
-        6 Décembre
+      <hr>
+      <button id="6/12" style="display: none;" onclick="
+        document.getElementById('heading_6/12').style.display = 'block'
+        document.getElementById('title_6/12').style.display = 'block'">
+          6 Décembre
       </button>
       <script>
         const six_douze = new Date("2024-12-06");
@@ -20,5 +23,9 @@
           document.getElementById("6/12").style.display = "block";
         }
       </script>
+      <h1 id="heading_6/12" style="display: none;">Fun fact:</h1>
+      <p id="title_6/12" style="display: none;">
+        the Nike logo is worth an estimated value of more than $13 billion
+      </p>
     </body>
   </html>
