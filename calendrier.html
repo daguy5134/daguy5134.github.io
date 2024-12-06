@@ -33,14 +33,18 @@
       </div>
       <hr>
       <div class="button-container">
-        <button id="5/12" style="display: none;" onclick="document.getElementById('heading_5/12').style.display = 'block'
-        document.getElementById('text_5/12').style.display = 'block'
-        document.getElementById('hide').style.display = 'block'">
-          5 Décembre
-        </button>
-        <button id="6/12" style="display: none;" onclick="document.getElementById('heading_6/12').style.display = 'block'
-        document.getElementById('text_6/12').style.display = 'block'
-        document.getElementById('hide').style.display = 'block'">
+        <button id="5/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = 'Énigme (difficile):'; 
+        document.getElementById('text').innerHTML = 'Vous avez 8 billes. Elles sont toutes identiques en poids sauf une<br>qui est plus légère. Vous avez une balance qui penche du côté<br>le plus lourd. Vous ne pouvez l utilisez que trois fois.<br>Comment faites vous pour trouver l intrus ?'; 
+document.getElementById('hide').style.display = 'block';
+document.getElementById('heading').style.display = 'block';
+      document.getElementById('text').style.display = 'block';">
+			5 Décembre
+		</button>
+        <button id="6/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = 'Fait amusant:'; 
+        document.getElementById('text').innerHTML = 'Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer'; 
+        document.getElementById('hide').style.display = 'block';
+        document.getElementById('heading').style.display = 'block';
+      document.getElementById('text').style.display = 'block';">
           6 Décembre
         </button>
       </div>
@@ -60,24 +64,14 @@
           document.getElementById("6/12").style.display = "block";
         }
       </script>
-      <h1 id="heading_5/12" style="display: none; ; color: #73ba43;">Énigme (difficile):</h1>
-      <p id="text_5/12" style="display: none; color: #d2f5ba;">
-      Vous avez 8 billes. Elles sont toutes identiques en poids sauf une
-      <br>qui est plus légère. Vous avez une balance qui penche du côté
-      <br>le plus lourd. Vous ne pouvez l'utilisez que trois fois.
-      <br>Comment faites vous pour trouver l'intrus ?
+      <h1 id="heading" style="display:block; color: #73ba43;" ></h1>
+      <p id="text" style="display:block; color: #d2f5ba;">
       </p>
-      <h1 id="heading_6/12" style="display: none; ; color: #73ba43;">Fait amusant:</h1>
-      <p id="text_6/12" style="display: none; color: #d2f5ba;">
-      Le logo Nike a une valeur estimée de $13 million de milliards.
-      <br>Pourtant, il aurait couté $35 à créer
-      </p>
-      <button id="hide" style="display: none;" onclick="document.getElementById('heading_6/12').style.display = 'none'
-      document.getElementById('text_6/12').style.display = 'none'
-      document.getElementById('hide').style.display = 'none'
-      document.getElementById('heading_5/12').style.display = 'none'
-      document.getElementById('text_5/12').style.display = 'none'
-      document.getElementById('hide').style.display = 'none'">
+
+      <button id="hide" style="display: none;" onclick="
+      document.getElementById('heading').style.display = 'none';
+      document.getElementById('text').style.display = 'none';
+      document.getElementById('hide').style.display = 'none';">
       	Cacher
       </button>
     </body>
