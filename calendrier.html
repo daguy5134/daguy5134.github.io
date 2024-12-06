@@ -1,7 +1,7 @@
 <!DOCTYPE html>
   <html>
     <title>Calendrier</title>
-    <body>
+    <body style="background-image: url('https://img.freepik.com/free-photo/beautiful-christmas-eve-concept-with-copy-space_23-2148703379.jpg');">
       <div>
         <a href="https://daguy5134.github.io/main">
           <img src="https://cdn-icons-png.flaticon.com/512/61/61972.png" alt="Home button" height="40" width="40">
@@ -11,10 +11,10 @@
         </center>
       </div>
       <hr>
-      <button id="6/12" style="display: none;" onclick="
-        document.getElementById('heading_6/12').style.display = 'block'
-        document.getElementById('title_6/12').style.display = 'block'">
-          6 Décembre
+      <button id="6/12" style="display: none;" onclick="document.getElementById('heading_6/12').style.display = 'block'
+      document.getElementById('text_6/12').style.display = 'block'
+      document.getElementById('hide').style.display = 'block'">
+        6 Décembre
       </button>
       <script>
         const six_douze = new Date("2024-12-06");
@@ -23,9 +23,14 @@
           document.getElementById("6/12").style.display = "block";
         }
       </script>
-      <h1 id="heading_6/12" style="display: none;">Fun fact:</h1>
-      <p id="title_6/12" style="display: none;">
-        the Nike logo is worth an estimated value of more than $13 billion
+      <h1 id="heading_6/12" style="display: none; ; color: #73ba43;">Fun fact:</h1>
+      <p id="text_6/12" style="display: none; color: #d2f5ba;">
+      the Nike logo is worth an estimated value of more than $13 billion
       </p>
+      <button id="hide" style="display: none;" onclick="document.getElementById('heading_6/12').style.display = 'none'
+      document.getElementById('text_6/12').style.display = 'none'
+      document.getElementById('hide').style.display = 'none'">
+      	Hide
+      </button>
     </body>
   </html>
