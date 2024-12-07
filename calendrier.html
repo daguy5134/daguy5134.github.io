@@ -166,6 +166,41 @@ document.getElementById('heading').style.display = 'block';
       document.getElementById('text').style.display = 'block';">
           19 Décembre
         </button>
+        <button id="20/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = 'Fait amusant:'; 
+        document.getElementById('text').innerHTML = 'Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer'; 
+        document.getElementById('hide').style.display = 'block';
+        document.getElementById('heading').style.display = 'block';
+      document.getElementById('text').style.display = 'block';">
+          20 Décembre
+        </button>
+        <button id="21/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = 'Fait amusant:'; 
+        document.getElementById('text').innerHTML = 'Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer'; 
+        document.getElementById('hide').style.display = 'block';
+        document.getElementById('heading').style.display = 'block';
+      document.getElementById('text').style.display = 'block';">
+          21 Décembre
+        </button>
+        <button id="22/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = 'Fait amusant:'; 
+        document.getElementById('text').innerHTML = 'Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer'; 
+        document.getElementById('hide').style.display = 'block';
+        document.getElementById('heading').style.display = 'block';
+      document.getElementById('text').style.display = 'block';">
+          22 Décembre
+        </button>
+        <button id="23/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = 'Fait amusant:'; 
+        document.getElementById('text').innerHTML = 'Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer'; 
+        document.getElementById('hide').style.display = 'block';
+        document.getElementById('heading').style.display = 'block';
+      document.getElementById('text').style.display = 'block';">
+          23 Décembre
+        </button>
+        <button id="24/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = 'Fait amusant:'; 
+        document.getElementById('text').innerHTML = 'Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer'; 
+        document.getElementById('hide').style.display = 'block';
+        document.getElementById('heading').style.display = 'block';
+      document.getElementById('text').style.display = 'block';">
+          24 Décembre
+        </button>
       </div>
       <script>
         const today = new Date();
@@ -196,14 +231,15 @@ document.getElementById('heading').style.display = 'block';
     vingt_deux_douze: new Date("2024-12-22"),
     vingt_trois_douze: new Date("2024-12-23"),
     vingt_quatre_douze: new Date("2024-12-24"),
-};
+}
 
 		for (const key in dates) {
         	dates[key].setHours(0, 0, 0, 0);
-            iteration++;
-            if(dates[keys] <= today){
+            iteration += 1;
+            if(dates[key] <= today){
             	const elemid = iteration + "/12";
                 document.getElementById(elemid).style.display = "block";
+                console.log(elemid);
             }
         }
     	today.setHours(0, 0, 0, 0);
