@@ -62,21 +62,28 @@
         document.getElementById('text').innerHTML = text_1_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';">
+      document.getElementById('text').style.display = 'block';
+      document.getElementById('answer').style.display = 'block';
+      document.getElementById('answer_text').style.display = 'none';
+      solution = answer_1_12;">
 			1
 		</button>
         <button id="2/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact;
         document.getElementById('text').innerHTML = text_2_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';">
+      document.getElementById('text').style.display = 'block';
+      document.getElementById('answer').style.display = 'none';
+      document.getElementById('answer_text').style.display = 'none';">
           2
         </button>
         <button id="3/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
         document.getElementById('text').innerHTML = text_3_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';">
+      document.getElementById('text').style.display = 'block';
+      document.getElementById('answer').style.display = 'none';
+      document.getElementById('answer_text').style.display = 'none';">
           3
         </button>
         <button id="4/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
@@ -85,6 +92,7 @@ document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
       document.getElementById('text').style.display = 'block';
       document.getElementById('answer').style.display = 'block';
+      document.getElementById('answer_text').style.display = 'none';
       solution = answer_4_12;">
           4
         </button>
@@ -92,35 +100,46 @@ document.getElementById('heading').style.display = 'block';
         document.getElementById('text').innerHTML = text_5_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';">
+      document.getElementById('text').style.display = 'block';
+      document.getElementById('answer').style.display = 'none';
+      document.getElementById('answer_text').style.display = 'none';">
           5
         </button>
         <button id="6/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
         document.getElementById('text').innerHTML = text_6_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';">
+      document.getElementById('text').style.display = 'block';
+      document.getElementById('answer').style.display = 'block';
+      document.getElementById('answer_text').style.display = 'none';
+      solution = answer_6_12;">
           6
         </button>
         <button id="7/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
         document.getElementById('text').innerHTML = text_7_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';">
+      document.getElementById('text').style.display = 'block';
+      document.getElementById('answer').style.display = 'none';
+      document.getElementById('answer_text').style.display = 'none';">
           7
         </button>
         <button id="8/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact;
         document.getElementById('text').innerHTML = text_8_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';">
+      document.getElementById('text').style.display = 'block';
+      document.getElementById('answer').style.display = 'none';
+      document.getElementById('answer_text').style.display = 'none';">
           8
         </button>
-        <button id="9/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        <button id="9/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
         document.getElementById('text').innerHTML = text_9_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';">
+      document.getElementById('text').style.display = 'block';
+      document.getElementById('answer').style.display = 'none';
+      document.getElementById('answer_text').style.display = 'none';">
           9
         </button>
         <button id="10/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
@@ -236,13 +255,14 @@ document.getElementById('heading').style.display = 'block';
         
         var solution = null;
 
-        const text_1_12 = "Vous avez 8 billes. Elles sont toutes identiques en poids sauf une<br>qui est plus légère. Vous avez une balance qui penche du côté<br>le plus lourd. Vous ne pouvez l'utilisez que trois fois.<br>Comment faites vous pour trouver l'intrus ?"; // separe 8 en 3, 3 et 2, compare 3 et 3 puis compare 2 des trois
+        const text_1_12 = "Vous avez 8 billes. Elles sont toutes identiques en poids sauf une<br>qui est plus légère. Vous avez une balance qui penche du côté<br>le plus lourd. Vous ne pouvez l'utilisez que deux fois.<br>Comment faites vous pour trouver l'intrus ?"; // separe 8 en 3, 3 et 2, compare 3 et 3 puis compare 2 des trois
         const text_2_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_3_12 = 'Toto dit à son frère: "Va arroser le jardin!".<br>Son frère lui répond: "Mais il pleut!".<br>"Oh la la, arrête de râler, juste prend un parapluie!".';
         const text_4_12 = "Avant-hier, Catherine avait 17 ans, l'année prochaine elle aura 20 ans.<br>Comment est-ce possible ?";
         const answer_4_12 = "Catherine est née le 31 Décembre et nous sommes le 1er Janvier.<br>Avant-hier (le 30/12) elle avait encore 17 ans.<br>Hier (le 31/12) elle a eu 18 ans.<br>Cette année elle aura 19 ans (à la fin de l'année).<br>Et l'année prochaine elle aura 20 ans (aussi à la fin de l'année).<br>Il faut se souvenir qu'il est dit l'année prochaine et non pas dans un an."
         const text_5_12 = "Les escargots sont de gros dormeurs:<br>Ils peuvent faire des siestes de quelques heures à ... trois ans !<br>C'est ce que l'on appelle faire la grasse matinée!";
-        const text_6_12 = "Qu'est-ce qui est plus grand que la Tour Eiffel mais infiniment moins lourd ?"; // Son ombre
+        const text_6_12 = "Qu'est-ce qui est plus grand que la Tour Eiffel mais infiniment moins lourd ?"; 
+        const answer_6_12 = "Son ombre."
         const text_7_12 = "Que demande un footballeur à son coiffeur ?<br>La coupe du monde s'il vous plait.";
         const text_8_12 = "Sur Vénus, une journée dure plus longtemps qu'une année.<br>Cela est du au fait que cette planète tourne très lentement sur elle même.<br>Ainsi, une journée vénusienne équivaut à 243 jours terrestres et une année vénusienne à 225.";
         const text_9_12 = "Un fou se rend dans un village dans les Alpes.<br>Il dit à un habitant :<br> -J'aimerais aller en haut de la montagne en voiture. Quelle route prendre ?<br>Le villageois lui indique la direction mais le prévient : <br> - Attention, une fois en haut tu ne pourras pas faire demi-tour, c'est trop escarpé!<br> - C'est pas grave, j'y vais comme même ! répond-il. Je sais ! Je vais y aller en marche arrière ! ajoute-t-il.<br>Deux heures plus tard, le fou revient en marche arrière, sort de la voiture et dit au villageois :<br> - C'est bon, j'ai réussi à faire demi-tour !";
@@ -312,13 +332,16 @@ document.getElementById('heading').style.display = 'block';
       <button id="hide" class="other-button" style="display: none;" onclick="
       document.getElementById('heading').style.display = 'none';
       document.getElementById('text').style.display = 'none';
-      document.getElementById('hide').style.display = 'none';">
+      document.getElementById('hide').style.display = 'none';
+      document.getElementById('answer').style.display = 'none';
+      document.getElementById('answer_text').style.display = 'none';">
       	Cacher
       </button>
       <button id="answer" class="other-button" style="display: none;"
-      onclick="document.getElementById('answer_text').innerHTML = solution">
+      onclick="document.getElementById('answer_text').innerHTML = solution;
+      document.getElementById('answer_text').style.display = 'block';">
       Réponse
       </button>
-      <p id="answer_text"></p>
+      <p id="answer_text" style="display:block; color: #d2f5ba;"></p>
     </body>
   </html>
