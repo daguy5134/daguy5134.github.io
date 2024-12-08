@@ -14,12 +14,29 @@
         }
         .button-container {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); 
+            gap: 1px; 
             justify-content: center;
             align-items: center;
+            padding: 1x;
         }
         button {
             margin: 5px;
+            box-shadow: 3px 3px 0px 0px #8a2a21;
+            background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+            background-color:#c62d1f;
+            border-radius:42px;
+            border:6px solid #d02718;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Impact;
+            font-size:22px;
+            padding:7px 13px;
+            text-decoration:none;
+            text-shadow:3px 3px 2px #810e05;
+        }
+        .other-button{
         }
     </style>
     <body>
@@ -33,180 +50,180 @@
       </div>
       <hr>
       <div class="button-container">
-        <button id="1/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_1_12; 
+        <button id="1/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_1_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
       document.getElementById('text').style.display = 'block';">
-			1 Décembre
+			1
 		</button>
-        <button id="2/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact; 
-        document.getElementById('text').innerHTML = text_2_12; 
+        <button id="2/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact;
+        document.getElementById('text').innerHTML = text_2_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
       document.getElementById('text').style.display = 'block';">
-          2 Décembre
+          2
         </button>
-        <button id="3/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague; 
-        document.getElementById('text').innerHTML = text_3_12; 
+        <button id="3/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
+        document.getElementById('text').innerHTML = text_3_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
       document.getElementById('text').style.display = 'block';">
-          3 Décembre
+          3
         </button>
-        <button id="4/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_4_12; 
+        <button id="4/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_4_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          4 Décembre
+      document.getElementById('text').style.display = 'block';">
+          4
         </button>
-        <button id="5/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact; 
-        document.getElementById('text').innerHTML = text_5_12; 
+        <button id="5/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact;
+        document.getElementById('text').innerHTML = text_5_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          5 Décembre
+      document.getElementById('text').style.display = 'block';">
+          5
         </button>
-        <button id="6/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_6_12; 
+        <button id="6/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_6_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          6 Décembre
+      document.getElementById('text').style.display = 'block';">
+          6
         </button>
-        <button id="7/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague; 
-        document.getElementById('text').innerHTML = text_7_12; 
+        <button id="7/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
+        document.getElementById('text').innerHTML = text_7_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          7 Décembre
+      document.getElementById('text').style.display = 'block';">
+          7
         </button>
-        <button id="8/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague; 
-        document.getElementById('text').innerHTML = text_8_12; 
+        <button id="8/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact;
+        document.getElementById('text').innerHTML = text_8_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          8 Décembre
+      document.getElementById('text').style.display = 'block';">
+          8
         </button>
-        <button id="9/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_9_12; 
+        <button id="9/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_9_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          9 Décembre
+      document.getElementById('text').style.display = 'block';">
+          9
         </button>
-        <button id="10/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_10_12; 
+        <button id="10/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_10_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          10 Décembre
+      document.getElementById('text').style.display = 'block';">
+          10
         </button>
-        <button id="11/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_11_12; 
+        <button id="11/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_11_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          11 Décembre
+      document.getElementById('text').style.display = 'block';">
+          11
         </button>
-        <button id="12/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_12_12; 
+        <button id="12/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_12_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          12 Décembre
+      document.getElementById('text').style.display = 'block';">
+          12
         </button>
-        <button id="13/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_13_12; 
+        <button id="13/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_13_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          13 Décembre
+      document.getElementById('text').style.display = 'block';">
+          13
         </button>
-        <button id="14/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_14_12; 
+        <button id="14/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_14_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          14 Décembre
+      document.getElementById('text').style.display = 'block';">
+          14
         </button>
-        <button id="15/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_15_12; 
+        <button id="15/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_15_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          15 Décembre
+      document.getElementById('text').style.display = 'block';">
+          15
         </button>
-        <button id="16/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_16_12; 
+        <button id="16/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_16_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          16 Décembre
+      document.getElementById('text').style.display = 'block';">
+          16
         </button>
-        <button id="17/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_17_12; 
+        <button id="17/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_17_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          17 Décembre
+      document.getElementById('text').style.display = 'block';">
+          17
         </button>
-        <button id="18/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_18_12; 
+        <button id="18/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_18_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          18 Décembre
+      document.getElementById('text').style.display = 'block';">
+          18
         </button>
-        <button id="19/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_19_12; 
+        <button id="19/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_19_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          19 Décembre
+      document.getElementById('text').style.display = 'block';">
+          19
         </button>
-        <button id="20/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_20_12; 
+        <button id="20/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_20_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          20 Décembre
+      document.getElementById('text').style.display = 'block';">
+          20
         </button>
-        <button id="21/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_21_12; 
+        <button id="21/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_21_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          21 Décembre
+      document.getElementById('text').style.display = 'block';">
+          21
         </button>
-        <button id="22/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_22_12; 
+        <button id="22/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_22_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          22 Décembre
+      document.getElementById('text').style.display = 'block';">
+          22
         </button>
-        <button id="23/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_23_12; 
+        <button id="23/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_23_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          23 Décembre
+      document.getElementById('text').style.display = 'block';">
+          23
         </button>
-        <button id="24/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme; 
-        document.getElementById('text').innerHTML = text_24_12; 
+        <button id="24/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
+        document.getElementById('text').innerHTML = text_24_12;
 document.getElementById('hide').style.display = 'block';
 document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';"> 
-          24 Décembre
+      document.getElementById('text').style.display = 'block';">
+          24
         </button>
       </div>
       <script>
       	const enigme = "Énigme:";
         const funfact = "Fait amusant:";
         const blague = "Blague:";
-        
+
         const text_1_12 = "Vous avez 8 billes. Elles sont toutes identiques en poids sauf une<br>qui est plus légère. Vous avez une balance qui penche du côté<br>le plus lourd. Vous ne pouvez l'utilisez que trois fois.<br>Comment faites vous pour trouver l'intrus ?"; // separe 8 en 3, 3 et 2, compare 3 et 3 puis compare 2 des trois
         const text_2_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_3_12 = 'Toto dit à son frère: "Va arroser le jardin!".<br>Son frère lui répond: "Mais il pleut!".<br>"Oh la la, arrête de râler, juste prend un parapluie!".';
@@ -214,11 +231,11 @@ document.getElementById('heading').style.display = 'block';
         const text_5_12 = "Les escargots sont de gros dormeurs:<br>Ils peuvent faire des siestes de quelques heures à ... trois ans !<br>C'est ce que l'on appelle faire la grasse matinée!";
         const text_6_12 = "Qu'est-ce qui est plus grand que la Tour Eiffel mais infiniment moins lourd ?"; // Son ombre
         const text_7_12 = "Que demande un footballeur à son coiffeur ?<br>La coupe du monde s'il vous plait.";
-        const text_8_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
+        const text_8_12 = "Sur Vénus, une journée dure plus longtemps qu'une année.<br>Cela est du au fait que cette planète tourne très lentement sur elle même.<br>Ainsi, une journée vénusienne équivaut à 243 jours terrestres et une année vénusienne à 225.";
         const text_9_12 = 'Vous avez 8 billes. Elles sont toutes identiques en poids sauf une<br>qui est plus légère. Vous avez une balance qui penche du côté<br>le plus lourd. Vous ne pouvez l utilisez que trois fois.<br>Comment faites vous pour trouver l intrus ?';
         const text_10_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_11_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
-        const text_12_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
+        const text_12_12 = "La baleine bleue a un coeur si grand qu'un humain pourrait nager dedans!<br>Il ferait environ la taille d'une voiture et pèserait 180 kg!<br>Mais ce n'est pas tout!<br>La baleine bleue, en tant que plus gros animal sur Terre, détient d'autres records.<br>Par exemple:<br>		- Foie de 700 kg<br>	 - Rein de 1 tonne<br>		- Langue de 2 tonnes (soit le poids d'un éléphant d'Afrique)";
         const text_13_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_14_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_15_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
@@ -231,10 +248,10 @@ document.getElementById('heading').style.display = 'block';
         const text_22_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_23_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_24_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
-      
+
         const today = new Date();
         let iteration = 0;
-        
+
         const dates = {
     un_douze: new Date("2024-12-01"),
     deux_douze: new Date("2024-12-02"),
@@ -272,14 +289,14 @@ document.getElementById('heading').style.display = 'block';
             }
         }
     	today.setHours(0, 0, 0, 0);
-        
-        
+
+
       </script>
       <h1 id="heading" style="display:block; color: #73ba43;" ></h1>
       <p id="text" style="display:block; color: #d2f5ba;">
       </p>
 
-      <button id="hide" style="display: none;" onclick="
+      <button id="hide" class="other-button" style="display: none;" onclick="
       document.getElementById('heading').style.display = 'none';
       document.getElementById('text').style.display = 'none';
       document.getElementById('hide').style.display = 'none';">
