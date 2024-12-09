@@ -14,7 +14,7 @@
         }
         .button-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); 
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
             gap: 1px;
             justify-content: center;
             align-items: center;
@@ -58,242 +58,85 @@
       </div>
       <hr>
       <div class="button-container">
-        <button id="1/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_1_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'block';
-      document.getElementById('answer_text').style.display = 'none';
-      solution = answer_1_12;">
+        <button id="1/12" style="display: none;" onclick="button_func(enigme, 1);">
 			1
 		</button>
-        <button id="2/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact;
-        document.getElementById('text').innerHTML = text_2_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="2/12" style="display: none;" onclick="button_func(funfact, 2);">
           2
         </button>
-        <button id="3/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
-        document.getElementById('text').innerHTML = text_3_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="3/12" style="display: none;" onclick="button_func(blague, 3);">
           3
         </button>
-        <button id="4/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_4_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'block';
-      document.getElementById('answer_text').style.display = 'none';
-      solution = answer_4_12;">
+        <button id="4/12" style="display: none;" onclick="button_func(enigme, 4);">
           4
         </button>
-        <button id="5/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact;
-        document.getElementById('text').innerHTML = text_5_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="5/12" style="display: none;" onclick="button_func(funfact, 5);">
           5
         </button>
-        <button id="6/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_6_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'block';
-      document.getElementById('answer_text').style.display = 'none';
-      solution = answer_6_12;">
+        <button id="6/12" style="display: none;" onclick="button_func(enigme, 6);">
           6
         </button>
-        <button id="7/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
-        document.getElementById('text').innerHTML = text_7_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="7/12" style="display: none;" onclick="button_func(blague, 7);">
           7
         </button>
-        <button id="8/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = funfact;
-        document.getElementById('text').innerHTML = text_8_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="8/12" style="display: none;" onclick="button_func(funfact, 8);">
           8
         </button>
-        <button id="9/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
-        document.getElementById('text').innerHTML = text_9_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="9/12" style="display: none;" onclick="button_func(blague, 9);">
           9
         </button>
-        <button id="10/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = blague;
-        document.getElementById('text').innerHTML = text_10_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="10/12" style="display: none;" onclick="button_func(null, 10);">
           10
         </button>
-        <button id="11/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_11_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="11/12" style="display: none;" onclick="button_func(null, 11);">
           11
         </button>
-        <button id="12/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_12_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="12/12" style="display: none;" onclick="button_func(null, 12);">
           12
         </button>
-        <button id="13/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_13_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="13/12" style="display: none;" onclick="button_func(null, 13);">
           13
         </button>
-        <button id="14/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_14_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="14/12" style="display: none;" onclick="button_func(null, 14);">
           14
         </button>
-        <button id="15/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_15_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="15/12" style="display: none;" onclick="button_func(null, 15);">
           15
         </button>
-        <button id="16/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_16_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="16/12" style="display: none;" onclick="button_func(null, 16);">
           16
         </button>
-        <button id="17/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_17_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="17/12" style="display: none;" onclick="button_func(null, 17);">
           17
         </button>
-        <button id="18/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_18_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="18/12" style="display: none;" onclick="button_func(null, 18);">
           18
         </button>
-        <button id="19/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_19_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="19/12" style="display: none;" onclick="button_func(null, 19);">
           19
         </button>
-        <button id="20/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_20_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="20/12" style="display: none;" onclick="button_func('unknown', 20);">
           20
         </button>
-        <button id="21/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_21_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="21/12" style="display: none;" onclick="button_func('unknown', 21);">
           21
         </button>
-        <button id="22/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_22_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="22/12" style="display: none;" onclick="button_func('unknown', 22);">
           22
         </button>
-        <button id="23/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_23_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="23/12" style="display: none;" onclick="button_func('unknown', 23);">
           23
         </button>
-        <button id="24/12" style="display: none;" onclick="document.getElementById('heading').innerHTML = enigme;
-        document.getElementById('text').innerHTML = text_24_12;
-document.getElementById('hide').style.display = 'block';
-document.getElementById('heading').style.display = 'block';
-      document.getElementById('text').style.display = 'block';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
+        <button id="24/12" style="display: none;" onclick="button_func('unknown', 24);">
           24
         </button>
       </div>
       <script>
-      	function answer_func(day){
-        	document.getElementById('answer').style.display = 'none';
-      		document.getElementById('answer_text').style.display = 'none';
-        	const title = document.getElementById('heading').innerHTML
-            if(title === enigme){
-            	document.getElementById('answer').style.display = 'block';
-                varName = "answer_" +;
-                solution = window;
-            }
-        }
-      	
+
       	const enigme = "Énigme:";
         const funfact = "Fait amusant:";
         const blague = "Blague:";
-        
+
         var solution = null;
 
         const text_1_12 = "Vous avez 8 billes. Elles sont toutes identiques en masse sauf une<br>qui est plus légère. Vous avez une balance qui penche du côté<br>le plus lourd. Vous ne pouvez l'utilisez que deux fois.<br>Comment faites vous pour trouver l'intrus ?"; // separe 8 en 3, 3 et 2, compare 3 et 3 puis compare 2 des trois
@@ -303,7 +146,7 @@ document.getElementById('heading').style.display = 'block';
         const text_4_12 = "Avant-hier, Catherine avait 17 ans, l'année prochaine elle aura 20 ans.<br>Comment est-ce possible ?";
         const answer_4_12 = "Catherine est née le 31 Décembre et nous sommes le 1er Janvier.<br>Avant-hier (le 30/12) elle avait encore 17 ans.<br>Hier (le 31/12) elle a eu 18 ans.<br>Cette année elle aura 19 ans (à la fin de l'année).<br>Et l'année prochaine elle aura 20 ans (aussi à la fin de l'année).<br>Il faut se souvenir qu'il est dit l'année prochaine et non pas dans un an."
         const text_5_12 = "Les escargots sont de gros dormeurs:<br>Ils peuvent faire des siestes de quelques heures à ... trois ans !<br>C'est ce que l'on appelle faire la grasse matinée!";
-        const text_6_12 = "Qu'est-ce qui est plus grand que la Tour Eiffel mais infiniment moins lourd ?"; 
+        const text_6_12 = "Qu'est-ce qui est plus grand que la Tour Eiffel mais infiniment moins lourd ?";
         const answer_6_12 = "Son ombre."
         const text_7_12 = "Que demande un footballeur à son coiffeur ?<br>La coupe du monde s'il vous plait.";
         const text_8_12 = "Sur Vénus, une journée dure plus longtemps qu'une année.<br>Cela est du au fait que cette planète tourne très lentement sur elle même.<br>Ainsi, une journée vénusienne équivaut à 243 jours terrestres et une année vénusienne à 225.";
@@ -360,10 +203,30 @@ document.getElementById('heading').style.display = 'block';
             if(dates[key] <= today){
             	const elemid = iteration + "/12";
                 document.getElementById(elemid).style.display = "block";
-                console.log(elemid);
             }
         }
     	today.setHours(0, 0, 0, 0);
+
+        function button_func(type, day){
+            document.getElementById('heading').innerHTML = type;
+            const text_id = `text_${day}_12`;
+            document.getElementById('text').innerHTML = eval(text_id);
+            document.getElementById('hide').style.display = 'block';
+            document.getElementById('heading').style.display = 'block';
+            document.getElementById('text').style.display = 'block';
+        	document.getElementById('answer').style.display = 'none';
+      		document.getElementById('answer_text').style.display = 'none';
+        	const title = document.getElementById('heading').innerHTML;
+            const my_date = new Date(`2024-12-${day}`);
+            my_date.setHours(0, 0, 0, 0);
+            if(type === enigme){
+            	if(my_date < today){
+                  document.getElementById('answer').style.display = 'block';
+                  varName = `answer_${day}_12`;
+                  solution = eval(varName);
+                }
+            }
+        }
 
 
       </script>
