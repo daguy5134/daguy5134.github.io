@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
   <html>
     <title>Calendrier</title><style>
@@ -193,6 +194,7 @@
         const text_22_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_23_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_24_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
+        const wait_answer = "Vous devez attendre demain pour voir la réponse. <br>En attendant, réfléchissez !"
 
         const today = new Date();
         let iteration = 0;
@@ -247,10 +249,12 @@
             const my_date = new Date(`2024-12-${day}`);
             my_date.setHours(0, 0, 0, 0);
             if(type === enigme){
+            	document.getElementById('answer').style.display = 'block';
             	if(my_date < today){
-                  document.getElementById('answer').style.display = 'block';
-                  varName = `answer_${day}_12`;
-                  solution = eval(varName);
+                	varName = `answer_${day}_12`;
+                	solution = eval(varName);
+                } else {
+                	solution = wait_answer
                 }
             }
         }
