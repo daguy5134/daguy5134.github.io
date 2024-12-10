@@ -233,20 +233,21 @@
       <h1 id="heading" style="display:block; color: #058705;" ></h1>
       <p id="text" style="display:block; color: #77f79b;">
       </p>
-
-      <button id="hide" class="other-button" style="display: none;" onclick="
-      document.getElementById('heading').style.display = 'none';
-      document.getElementById('text').style.display = 'none';
-      document.getElementById('hide').style.display = 'none';
-      document.getElementById('answer').style.display = 'none';
-      document.getElementById('answer_text').style.display = 'none';">
-      	Cacher
-      </button>
-      <button id="answer" class="other-button" style="display: none;"
-      onclick="document.getElementById('answer_text').innerHTML = solution;
-      document.getElementById('answer_text').style.display = 'block';">
-      Réponse
-      </button>
+	  <div class="button-container">
+        <button id="hide" class="other-button" style="display: none;" onclick="
+        document.getElementById('heading').style.display = 'none';
+        document.getElementById('text').style.display = 'none';
+        document.getElementById('hide').style.display = 'none';
+        document.getElementById('answer').style.display = 'none';
+        document.getElementById('answer_text').style.display = 'none';">
+          Cacher
+        </button>
+        <button id="answer" class="other-button" style="display: none;"
+        onclick="document.getElementById('answer_text').innerHTML = solution;
+        document.getElementById('answer_text').style.display = 'block';">
+        Réponse
+        </button>
+      </div>
       <p id="answer_text" style="display:block; color: #77f79b;"></p>
       <p><br></p>
     </body>
