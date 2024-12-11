@@ -118,7 +118,7 @@
         <button id="11/12" class='day-button' style="display: none;" onclick="button_func(enigme, 11);">
           11
         </button>
-        <button id="12/12" class='day-button' style="display: none;" onclick="button_func(null, 12);">
+        <button id="12/12" class='day-button' style="display: none;" onclick="button_func(riddle, 12);">
           12
         </button>
         <button id="13/12" class='day-button' style="display: none;" onclick="button_func(null, 13);">
@@ -163,6 +163,7 @@
       	const enigme = "Énigme:";
         const funfact = "Fait amusant:";
         const blague = "Blague:";
+        const riddle = "Devinette:";
 
         var solution = null;
 
@@ -181,7 +182,8 @@
         const text_10_12 = "La baleine bleue a un coeur si grand qu'un humain pourrait nager dedans!<br>Il ferait environ la taille d'une voiture et pèserait 180 kg!<br>Mais ce n'est pas tout!<br>La baleine bleue, en tant que plus gros animal sur Terre, détient d'autres records.<br>Par exemple:<br>		- Foie de 700 kg<br>	 - Rein de 1 tonne<br>		- Langue de 2 tonnes (soit le poids d'un éléphant d'Afrique)";
         const text_11_12 = "2 pères et 2 fils sont dans une chambre avec 3 lits.<br> Chacun dort seul dans un lit.<br>Il n'y a aucun lit libre et aucun lit manquant.<br> Comment est-ce possible ?";
         const answer_11_12 = "Il n'y a que 3 personnes :<br>un fils, un père et un grand père.<br>Il y a donc deux fils :<br>	- Le fils<br>	- Le père (fils du grand père)<br>Et deux pères : <br>	 - Le père<br>	 - Le grand père (père du père)"
-        const text_12_12 = "La baleine bleue a un coeur si grand qu'un humain pourrait nager dedans!<br>Il ferait environ la taille d'une voiture et pèserait 180 kg!<br>Mais ce n'est pas tout!<br>La baleine bleue, en tant que plus gros animal sur Terre, détient d'autres records.<br>Par exemple:<br>		- Foie de 700 kg<br>	 - Rein de 1 tonne<br>		- Langue de 2 tonnes (soit le poids d'un éléphant d'Afrique)";
+        const text_12_12 = "Comment fait on pour mettre<br> deux Pères Noël dans un frigo ?";
+        const answer_12_12 = "C'est impossible, il n'y a qu'un Père Noël!"
         const text_13_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_14_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_15_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
@@ -256,6 +258,10 @@
                 } else {
                 	solution = wait_answer
                 }
+            } else if(type === enigme){
+            	document.getElementById('answer').style.display = 'block';
+                varName = `answer_${day}_12`;
+                solution = eval(varName);
             }
         }
 
