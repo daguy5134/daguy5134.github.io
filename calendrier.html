@@ -1,5 +1,6 @@
 <!DOCTYPE html>
   <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendrier</title>
     <link rel="apple-touch-icon" sizes="180x180" href="https://daguy5134.github.io/image/favicon/calendrier/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://daguy5134.github.io/image/favicon/calendrier/favicon-32x32.png">
@@ -128,7 +129,7 @@
         <button id="13/12" class='day-button' style="display: none;" onclick="button_func(blague, 13);">
           13
         </button>
-        <button id="14/12" class='day-button' style="display: none;" onclick="button_func(null, 14);">
+        <button id="14/12" class='day-button' style="display: none;" onclick="button_func(funfact, 14);">
           14
         </button>
         <button id="15/12" class='day-button' style="display: none;" onclick="button_func(null, 15);">
@@ -171,8 +172,8 @@
 
         var solution = null;
 
-        const text_1_12 = "Vous avez 8 billes. Elles sont toutes identiques en masse sauf une<br>qui est plus légère. Vous avez une balance qui penche du côté<br>le plus lourd. Vous ne pouvez l'utilisez que deux fois.<br>Comment faites vous pour trouver l'intrus ?"; // separe 8 en 3, 3 et 2, compare 3 et 3 puis compare 2 des trois
-        const answer_1_12 = "Il faut tout d'abord séparer les billes en trois groupes : <br>Deux groupes de trois et un groupe de 2.<br>Ensuite, on compare les deux groupes de trois.<br>Si ils ne sont pas égales en masse, on prend le plus léger.<br>On le sépare en 2 : un groupe de 2 billes et une bille solitaire.<br>On compare les deux billes du groupe de 2.<br>Si les deux sont inégales, le plus léger est l'intrus. <br>Sinon, l'intrus est la bille restante.<br>Si au tout début, quand nous avions comparé les deux groupes de trois,<br>ils étaient égaux en poids, on prend le groupe de deux.<br>Il nous suffit maintenant de comparer les deux billes de ce groupe entre elles.";
+        const text_1_12 = "Vous avez 8 billes. Elles sont toutes identiques en masse sauf une qui est plus légère. Vous avez une balance qui penche du côté le plus lourd. Vous ne pouvez l'utilisez que deux fois.<br> Comment faites vous pour trouver l'intrus ?"; // separe 8 en 3, 3 et 2, compare 3 et 3 puis compare 2 des trois
+        const answer_1_12 = "Il faut tout d'abord séparer les billes en trois groupes : <br>Deux groupes de trois et un groupe de 2. <br>Ensuite, on compare les deux groupes de trois.Si ils ne sont pas égales en masse, on prend le plus léger. On le sépare en 2 : un groupe de 2 billes et une bille solitaire. On compare les deux billes du groupe de 2. Si les deux sont inégales, le plus léger est l'intrus. Sinon, l'intrus est la bille restante. Si au tout début, quand nous avions comparé les deux groupes de trois, ils étaient égaux en poids, on prend le groupe de deux. Il nous suffit maintenant de comparer les deux billes de ce groupe entre elles.";
         const text_2_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_3_12 = 'Toto dit à son frère: "Va arroser le jardin!".<br>Son frère lui répond: "Mais il pleut!".<br>"Oh la la, arrête de râler, juste prend un parapluie!".';
         const text_4_12 = "Avant-hier, Catherine avait 17 ans, l'année prochaine elle aura 20 ans.<br>Comment est-ce possible ?";
@@ -189,7 +190,7 @@
         const text_12_12 = "Comment fait on pour mettre<br> deux Pères Noël dans un frigo ?";
         const answer_12_12 = "C'est impossible, il n'y a qu'un Père Noël!"
         const text_13_12 = "Toto dit à son copain :<br>	- J'ai peur pour le calendrier!<br> - Pourquoi ? lui répond-t-il.<br> - Et bien, ses jours sont comptés!";
-        const text_14_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
+        const text_14_12 = "On mesure en général la force des voitures en chevaux. Mais que réprésente 1 chevaux (l'unité) ? La force que peut produire un cheval (l'animal) ? Et bien non ! Un cheval (l'animal) peut produire une force supérieure à 1 chevaux (l'unité). Cette force peut aller jusqu'à 18 chevaux !";
         const text_15_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_16_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_17_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
