@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<style>
+header {
+	padding:10px;
+    background-image: url("https://th.bing.com/th/id/R.c8382e20bb0b70a69a960390117f4e02?rik=tlwH6BzDmDxobQ&pid=ImgRaw&r=0");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    	}
+</style>
+<header>
+<center>
+<h1 style="font-size:60px; color:white;">Les Cochon d'Inde</h1>
+</center>
+</header>
+<h2>
+Petit quiz sur les cochons d'Inde :
+</h2>
+<form>
+<p>D'où viennent les cochons d'Inde ?</p>
+  <input type="radio" id="1a" name="question1" value="1a"  required>
+  <label for="1a" id="1aLabel"></label><br>
+  <input type="radio" id="1b" name="question1" value="1b"  required>
+  <label for="1b" id="1bLabel"></label><br>
+  <input type="radio" id="1c" name="question1" value="1c"  required>
+  <label for="1c" id="1cLabel"></label><br>
+<p>Quel est le nom scientifique du cochon d'Inde ?</p>
+  <input type="radio" id="2a" name="question2" value="2a" required>
+  <label for="2a" id="2aLabel"></label><br>
+  <input type="radio" id="2b" name="question2" value="2b" required>
+  <label for="2b" id="2bLabel"></label><br>
+  <input type="radio" id="2c" name="question2" value="2c" required>
+  <label for="2c" id="2cLabel"></label><br>
+<p>Quel est le régime alimentaire principal d'un cochon d'Inde ?</p>
+  <input type="radio" id="3a" name="question3" value="3a" required>
+  <label for="3a" id="3aLabel"></label><br>
+  <input type="radio" id="3b" name="question3" value="3b" required>
+  <label for="3b" id="3bLabel"></label><br>
+  <input type="radio" id="3c" name="question3" value="3c" required>
+  <label for="3c" id="3cLabel"></label><br>
+  <p id="answer3"></p>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+<script>
+const answers = {
+	1: "1c",
+    2: "2a",
+    3: "3b"
+}
+const options = {
+	"1a": "D'Inde",
+    "1b": "De Guinée",
+    "1c": "D'Amérique du Sud",
+    "2a": "Cavia porcellus",
+    "2b": "Cuniculus porcellus",
+    "2c": "Rodentia cavia",
+    "3a": "Carnivore",
+    "3b": "Herbivore",
+    "3c": "Omnivore"
+}
+const correct = {
+	"1c": "D'Amérique du Sud ✓",
+    "2a": "Cavia porcellus ✓",
+    "3b": "Herbivore ✓"
+}
+var idName = null;
+for(option in options){
+	idName = option + "Label";
+    document.getElementById(idName).innerHTML = options[option];
+}
+let iteration = 1;
+var questionName = null;
+var userAnswer = null;
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    for(const answer in answers){
+    	questionName = "question" + iteration;
+        userAnswer = document.querySelector('input[name=' + questionName + ']:checked').value;
+        idName = userAnswer + "Label";
+        if (userAnswer === answers[answer]){
+            document.getElementById(idName).innerHTML = options[userAnswer] + " ✓";
+            document.getElementById(idName).style.color = "#7DDA58";
+        } else {
+        	document.getElementById(idName).innerHTML = options[userAnswer] + " ✕";
+            document.getElementById(idName).style.color = "#DC5858";
+        }
+        iteration ++;
+    }
+});
+</script>
+</html>
