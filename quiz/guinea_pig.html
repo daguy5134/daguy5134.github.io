@@ -29,6 +29,7 @@ Petit quiz sur les cochons d'Inde :
   <label for="1b" id="1bLabel"></label><br>
   <input type="radio" id="1c" name="question1" value="1c"  required>
   <label for="1c" id="1cLabel"></label><br>
+  <p id="answer1"></p>
 <p>Quel est le nom scientifique du cochon d'Inde ?</p>
   <input type="radio" id="2a" name="question2" value="2a" required>
   <label for="2a" id="2aLabel"></label><br>
@@ -36,6 +37,7 @@ Petit quiz sur les cochons d'Inde :
   <label for="2b" id="2bLabel"></label><br>
   <input type="radio" id="2c" name="question2" value="2c" required>
   <label for="2c" id="2cLabel"></label><br>
+  <p id="answer2"></p>
 <p>Quel est le régime alimentaire principal d'un cochon d'Inde ?</p>
   <input type="radio" id="3a" name="question3" value="3a" required>
   <label for="3a" id="3aLabel"></label><br>
@@ -90,9 +92,13 @@ document.querySelector('form').addEventListener('submit', function(event) {
         } else {
         	document.getElementById(idName).innerHTML = options[userAnswer] + " ✕";
             document.getElementById(idName).style.color = "#DC5858";
+            document.getElementById("answer" + iteration).innerHTML = "Bonne réponse : " + options[answers[answer]];
+            document.getElementById("answer" + iteration).style.color = "#7DDA58";
         }
         iteration ++;
     }
 });
 </script>
 </html>
+
+
