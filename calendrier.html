@@ -255,6 +255,7 @@
             document.getElementById('text').style.display = 'block';
         	document.getElementById('answer').style.display = 'none';
       		document.getElementById('answer_text').style.display = 'none';
+            document.getElementById("mountyHall").style.display = "none";
         	const title = document.getElementById('heading').innerHTML;
             const my_date = new Date(`2024-12-${day}`);
             my_date.setHours(0, 0, 0, 0);
@@ -268,7 +269,7 @@
                 }
                 if (day === 15){
                 	document.getElementById("mountyHall").style.display = "block";
-                }
+                } 
             } else if(type === riddle){
             	document.getElementById('answer').style.display = 'block';
                 varName = `answer_${day}_12`;
