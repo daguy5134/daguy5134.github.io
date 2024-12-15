@@ -169,6 +169,8 @@
         const funfact = "Fait amusant:";
         const blague = "Blague:";
         const riddle = "Devinette:";
+        
+        const redirecting_scratch = "Vous allez être redirigé vers un projet scratch que j'ai créé et qui met en oeuvre cette énigme";
 
         var solution = null;
 
@@ -264,6 +266,9 @@
                 } else {
                 	solution = wait_answer
                 }
+                if (day === 15){
+                	document.getElementById("mountyHall").style.display = "block";
+                }
             } else if(type === riddle){
             	document.getElementById('answer').style.display = 'block';
                 varName = `answer_${day}_12`;
@@ -290,6 +295,12 @@
         document.getElementById('answer_text').style.display = 'block';">
         Réponse
         </button>
+        <a href="https://daguy5134.github.io/scratch/Mounty_Hall">
+        <button id="mountyHall" class="other-button" style="display: none;"
+        onclick="alert(redirecting_scratch);">
+        Démonstration
+        </button>
+        </a>
       </div>
       <p id="answer_text" style="display:block; color: #77f79b;"></p>
       <p><br></p>
