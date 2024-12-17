@@ -10,6 +10,7 @@
     /* Styles for dark mode */
     body {
         --main-text-color: white;
+        --bg-color: black;
     }
 }
 
@@ -17,11 +18,13 @@
     /* Styles for light mode */
     body {
         --main-text-color: black;
+        --bg-color: white;
     }
 }
 
 body {
     color: var(--main-text-color);
+   	background-color: var(--bg-color);
 }
 header {
 	padding:10px;
@@ -121,6 +124,8 @@ Petit quiz sur les cochons d'Inde :
 </form>
 </body>
 <script>
+const theme = styles.getPropertyValue('--main-text-color');
+
 const answers = {
 	1: "1c",
     2: "2a",
@@ -174,7 +179,7 @@ document.getElementById("submit_button").style.display = "inline-block";
       for(const option in options){
         idName = option + "Label";
         document.getElementById(idName).innerHTML = options[option];
-        document.getElementById(idName).style.color = "black";
+        document.getElementById(idName).style.color = theme;
   }
   iteration = 0;
   for(const answer in answers){
