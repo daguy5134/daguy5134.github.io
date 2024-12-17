@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,6 +6,23 @@
 </head>
 <body>
 <style>
+@media (prefers-color-scheme: dark) {
+    /* Styles for dark mode */
+    body {
+        --main-text-color: white;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    /* Styles for light mode */
+    body {
+        --main-text-color: black;
+    }
+}
+
+body {
+    color: var(--main-text-color);
+}
 header {
 	padding:10px;
     background-image: url("https://th.bing.com/th/id/R.c8382e20bb0b70a69a960390117f4e02?rik=tlwH6BzDmDxobQ&pid=ImgRaw&r=0");
