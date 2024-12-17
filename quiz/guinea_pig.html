@@ -47,7 +47,8 @@ Petit quiz sur les cochons d'Inde :
   <label for="3c" id="3cLabel"></label><br>
   <p id="answer3"></p>
   <br>
-  <input type="submit" value="Submit">
+  <input type="submit" class="endButtons" id="submit_button" value="Valider">
+  <input type="reset" class="endButtons" id="reset_button" value="Réintialliser">
 </form>
 </body>
 <script>
@@ -82,13 +83,14 @@ var questionName = null;
 var userAnswer = null;
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); 
+    document.getElementById("submit_button").style.display = "none";
+    iteration = 1;
     for(const answer in answers){
     	questionName = "question" + iteration;
         userAnswer = document.querySelector('input[name=' + questionName + ']:checked').value;
         idName = userAnswer + "Label";
         if (userAnswer === answers[answer]){
-            document.getElementById(idName).innerHTML = options[userAnswer] + " ✓";
-            document.getElementById(idName).style.color = "#7DDA58";
+            document.getElementById(idName).innerHTML = options[userAnswer] + " ✓";       				      		document.getElementById(idName).style.color = "#7DDA58";
         } else {
         	document.getElementById(idName).innerHTML = options[userAnswer] + " ✕";
             document.getElementById(idName).style.color = "#DC5858";
@@ -98,7 +100,18 @@ document.querySelector('form').addEventListener('submit', function(event) {
         iteration ++;
     }
 });
+document.querySelector('form').addEventListener('reset', function(event) {
+document.getElementById("submit_button").style.display = "inline-block";
+      for(const option in options){
+        idName = option + "Label";
+        document.getElementById(idName).innerHTML = options[option];
+        document.getElementById(idName).style.color = "black";
+  }
+  iteration = 0;
+  for(const answer in answers){
+  	iteration ++;
+  	document.getElementById("answer" + iteration).innerHTML = "";
+}
+});
 </script>
 </html>
-
-
