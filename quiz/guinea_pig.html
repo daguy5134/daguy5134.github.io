@@ -12,6 +12,57 @@ header {
   background-position: center;
   background-repeat: no-repeat;
     	}
+        
+        
+.reset-button {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.reset-button:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.reset-buttton:active {
+	position:relative;
+	top:3px;
+}
+
+.submit-button {
+	box-shadow: 3px 4px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:18px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:bold;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+.submit-button:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+.submit-button:active {
+	position:relative;
+	top:1px;
+}
 </style>
 <header>
 <center>
@@ -47,8 +98,8 @@ Petit quiz sur les cochons d'Inde :
   <label for="3c" id="3cLabel"></label><br>
   <p id="answer3"></p>
   <br>
-  <input type="submit" class="endButtons" id="submit_button" value="Valider">
-  <input type="reset" class="endButtons" id="reset_button" value="Réintialliser">
+  <input type="submit" class="submit-button" id="submit_button" value="Valider">
+  <input type="reset" class="reset-button" id="reset_button" value="Réintialliser">
 </form>
 </body>
 <script>
