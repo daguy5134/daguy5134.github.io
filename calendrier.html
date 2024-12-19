@@ -79,8 +79,8 @@
             top:3px;
         }
         .chocolate {
-            background-color: rgba(0, 0, 0, 1); /* Semi-transparent black (50% opacity) */
-        }
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 10px;
     </style>
     <body>
       <div>
@@ -255,8 +255,7 @@
             const text_id = `text_${day}_12`;
             document.getElementById('text').innerHTML = eval(text_id);
             document.getElementById('hide').style.display = 'block';
-            document.getElementById('heading').style.display = 'block';
-            document.getElementById('text').style.display = 'block';
+            document.getElementById('chocolateDiv').style.display = 'block';
         	document.getElementById('answer').style.display = 'none';
       		document.getElementById('answer_text').style.display = 'none';
             document.getElementById("mountyHall").style.display = "none";
@@ -283,15 +282,15 @@
 
 
       </script>
-      <div class"chocolate">
+      <div id="chocolateDiv" style="display: none;" class="chocolate">
       <h1 id="heading" style="display:block; color: #058705;" ></h1>
       <p id="text" style="display:block; color: #77f79b;">
       </p>
       </div>
+      <br>
 	  <div class="other-container">
         <button id="hide" class="other-button" style="display: none;" onclick="
-        document.getElementById('heading').style.display = 'none';
-        document.getElementById('text').style.display = 'none';
+        document.getElementById('chocolateDiv').style.display = 'none';
         document.getElementById('hide').style.display = 'none';
         document.getElementById('answer').style.display = 'none';
         document.getElementById('answer_text').style.display = 'none';">
@@ -309,7 +308,7 @@
         </button>
         </a>
       </div>
-      <p id="answer_text" style="display:block; color: #77f79b;"></p>
+      <p id="answer_text" class="chocolate" style="display:none; color: #77f79b;"></p>
       <p><br></p>
     </body>
   </html>
