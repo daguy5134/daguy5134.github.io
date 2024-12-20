@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
   <html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -285,6 +284,19 @@
                 solution = eval(varName);
             }
         }
+        
+        function answer(){
+        	var answerText = document.getElementById("answer_text");
+            var answerButton = document.getElementById("answer");
+            if (answerText.style.display === "none"){
+            	answerText.innerHTML = solution;
+        		answerText.style.display = 'block';
+                answerButton.innerHTML = "⯆ Réponse";
+            } else {
+            	answerText.style.display = 'none';
+                answerButton.innerHTML = "⯈ Réponse";
+            }
+        }
 
 
       </script>
@@ -303,9 +315,8 @@
           Cacher
         </button>
         <button id="answer" class="other-button" style="display: none;"
-        onclick="document.getElementById('answer_text').innerHTML = solution;
-        document.getElementById('answer_text').style.display = 'block';">
-        Réponse
+        onclick="answer()">
+        ⯈ Réponse
         </button>
         <a href="https://daguy5134.github.io/scratch/Mounty_Hall">
         <button id="mountyHall" class="other-button" style="display: none;"
