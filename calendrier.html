@@ -78,12 +78,23 @@
             position:relative;
             top:3px;
         }
+        .sweets-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
         .chocolate {
+            flex: 1; 
+            padding-right: 10px; 
             background-color: rgba(0, 0, 0, 0.7); 
             padding: 10px;
-            display: inline-block;
             margin: 15px;
             width: fit-content;
+        }
+
+        .candy {
+            flex: 0 0 auto; 
+            display: none; 
         }
     </style>
     <body>
@@ -157,7 +168,7 @@
         <button id="20/12" class='day-button' style="display: none;" onclick="button_func(enigme, 20);">
           20
         </button>
-        <button id="21/12" class='day-button' style="display: none;" onclick="button_func('unknown', 21);">
+        <button id="21/12" class='day-button' style="display: none;" onclick="button_func(funfact, 21);">
           21
         </button>
         <button id="22/12" class='day-button' style="display: none;" onclick="button_func('unknown', 22);">
@@ -209,7 +220,7 @@
         const text_19_12 = "Chaque midi, trois ouvriers du bâtiment – Bob, Marley et Jean – se retrouvent sur le toit d’un bâtiment. <br><br>Bob ouvre son sac et voit un jambon beurre à manger, craque et dit :<br> - Ca fait 20 ans que je travaille et 20 ans que je mange la même chose, si demain j’ai la même chose, je me suicide.<br>Marley ouvre son sac, voit une choucroute et dit la même chose. Jean ouvre son sac, voit des moules frites et dit la même chose.<br><br>Les 3 hommes se retrouvent le lendemain midi. Bob a encore un jambon beurre. Il saute du bâtiment. Même repas pour Marley, qui se suicide. Même chose pour Jean, qui saute à son tour. <br><br>A l’enterrement, leurs femmes se retrouvent en pleurs.<br>La femme de Bob dit :<br> - Je ne comprends pas, s’il m’avait prévenu, je lui aurais cuisiné autre chose.<br>La femme de Marley réagit pareil.<br>La femme de Jean encore plus effondrée que les autres, dit à son tour :<br> - Je ne comprends pas, c’est mon mari qui cuisinait ses plats…";
         const text_20_12 = "Dans une ville, il n'y a que deux coiffeurs. L'un a des cheveux en vrac, l'autre a une belle coupe bien taillé. <br>Chez quel coiffeur faut-il aller et pourquoi ?";
         const answer_20_12 = "Il faut aller voir celui qui a les cheveux en vrac car c'est lui qui s'occupe de l'autre avec la belle coupe de cheveux";
-        const text_21_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
+        const text_21_12 = "Vous avez probablement déjà vu le logo de la companie Chupa Chups. Et bien saviez vous que son créateur n'est nul autre que le célèbre peintre, Salvador Dali !";
         const text_22_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_23_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
         const text_24_12 = "Le logo Nike a une valeur estimee de $13 million de milliards.<br> Pourtant, il aurait couté $35 à créer";
@@ -259,7 +270,7 @@
             document.getElementById('heading').innerHTML = type;
             const text_id = `text_${day}_12`;
             document.getElementById('text').innerHTML = eval(text_id);
-            document.getElementById('hide').style.display = 'block';
+            document.getElementById('hide').style.display = 'inline-block';
             document.getElementById('chocolateDiv').style.display = 'block';
         	document.getElementById('answer').style.display = 'none';
       		document.getElementById('answer_text').style.display = 'none';
@@ -267,13 +278,18 @@
         	const title = document.getElementById('heading').innerHTML;
             const my_date = new Date(`2024-12-${day}`);
             my_date.setHours(0, 0, 0, 0);
+            if (day === 21){
+                	document.getElementById("candyDiv").style.display = "block";
+                } else {
+                	document.getElementById("candyDiv").style.display = "none";
+                }
             if(type === enigme){
             	document.getElementById('answer').style.display = 'block';
             	if(my_date < today){
                 	varName = `answer_${day}_12`;
                 	solution = eval(varName);
                 } else {
-                	solution = wait_answer
+                	solution = wait_answer;
                 }
                 if (day === 15){
                 	document.getElementById("mountyHall").style.display = "block";
@@ -300,12 +316,16 @@
 
 
       </script>
+      <div class="sweets-container">
       <div id="chocolateDiv" style="display: none;" class="chocolate">
       <h1 id="heading" style="display:block; color: #058705;" ></h1>
       <p id="text" style="display:block; color: #77f79b;">
       </p>
       </div>
-      <br>
+      <div class="candy" id="candyDiv" style="display: none;">
+      <img src="https://daguy5134.github.io/image/chupa_chups_logo.png" alt="Chupa Chups logo" style="width: 200px;" id="chupaChupsLogo">
+      </div>
+      <br><br><br><br><br><br>
 	  <div class="other-container">
         <button id="hide" class="other-button" style="display: none;" onclick="
         document.getElementById('chocolateDiv').style.display = 'none';
