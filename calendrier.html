@@ -98,9 +98,20 @@
             padding: 0px;
             margin: 0px;
         }
+        .Santa {
+            flex: 0 0 auto; 
+            display: none; 
+            padding: 0px;
+            margin: 0px;
+        }
         .chupa-img {
             object-fit: cover;
             width: 200px;
+            height: 200px;
+            padding: 0px;
+            margin:0px;
+        }
+        .santa-img {
             height: 200px;
             padding: 0px;
             margin:0px;
@@ -183,7 +194,7 @@
         <button id="22/12" class='day-button' style="display: none;" onclick="button_func(blague, 22);">
           22
         </button>
-        <button id="23/12" class='day-button' style="display: none;" onclick="button_func('unknown', 23);">
+        <button id="23/12" class='day-button' style="display: none;" onclick="button_func(funfact, 23);">
           23
         </button>
         <button id="24/12" class='day-button' style="display: none;" onclick="button_func('unknown', 24);">
@@ -231,7 +242,7 @@
         const answer_20_12 = "Il faut aller voir celui qui a les cheveux en vrac car c'est lui qui s'occupe de l'autre avec la belle coupe de cheveux";
         const text_21_12 = "Vous avez probablement déjà vu le logo de la companie Chupa Chups. Et bien saviez vous que son créateur n'est nul autre que le célèbre peintre, Salvador Dali !";
         const text_22_12 = "Une femme téléphone à sa soeur qui veille sur son chat pendant ses vacances :<br>– Ça va ? Le chat va bien également ?<br>– Non, ton chat est mort !<br>– Tu pourrais me préparer avec un minimum de douceur, quand tu annonces une terrible nouvelle. Par exemple, il se promenait sur le bord du balcon et puiis… Et maman, elle va bien ?<br>– Ben elle se promenait sur le bord du balcon et puiis…";
-        const text_23_12 = "Quand vous pensez au Père Noël, vous l'imaginez probablement comme sur le dessin ci-contre. Mais sachez que cette vision du Père Noël est très moderne et ne date que des années ";
+        const text_23_12 = "Quand vous pensez au Père Noël, vous l'imaginez probablement comme sur le dessin ci-contre. Mais sachez que cette vision du Père Noël est très moderne et ne date que des années 1930. Elle a été popularisée par l'illustrateur Haddon Sundblom pour une campagne publicitaire de la companie Coca Cola. Avant, le Père Noël était généralement en vert et non pas en rouge et prennait des formes variées. Il était parfois un personnage mince et pouvait même être représenté comme un elfe !";
         const text_24_12 = "enigme";
         const wait_answer = "Vous devez attendre demain pour voir la réponse. <br>En attendant, réfléchissez !"
 
@@ -292,6 +303,11 @@
                 } else {
                 	document.getElementById("candyDiv").style.display = "none";
                 }
+            if (day === 23){
+              document.getElementById("santaDiv").style.display = "block";
+            } else {
+              document.getElementById("santaDiv").style.display = "none";
+            }
             if(type === enigme){
             	document.getElementById('answer').style.display = 'block';
             	if(my_date < today){
@@ -327,7 +343,8 @@
       </script>
       <div class="sweets-container">
       <div id="santaDiv" style="display: none;" class="Santa">
-      <img src="https://daguy5134.github.io/image/Santa_Claus.png" alt="Santa Claus de Coca Cola" id="SantaClausImg">
+      <br>
+      <img src="https://daguy5134.github.io/image/Santa_Claus.png" alt="Santa Claus de Coca Cola" id="SantaClausImg" class="santa-img">
       </div>
       <div id="chocolateDiv" style="display: none;" class="chocolate">
       <h1 id="heading" style="display:block; color: #058705;" ></h1>
@@ -344,7 +361,9 @@
         document.getElementById('chocolateDiv').style.display = 'none';
         document.getElementById('hide').style.display = 'none';
         document.getElementById('answer').style.display = 'none';
-        document.getElementById('answer_text').style.display = 'none';">
+        document.getElementById('answer_text').style.display = 'none';
+        document.getElementById('candyDiv').style.display = 'none';
+        document.getElementById('santaDiv').style.display = 'none';">
           Cacher
         </button>
         <button id="answer" class="other-button" style="display: none;"
