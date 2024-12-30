@@ -27,14 +27,19 @@ body {
 	-webkit-border-radius:42px;
 	-moz-border-radius:42px;
 	border-radius:42px;
-	display:inline-block;
+	display: inline-flex;
 	cursor:pointer;
 	color:#3a8a9e;
 	font-family:Impact;
 	font-size:28px;
-	padding:7px 25px;
+	padding:10px;
+    width: auto; 
+    box-sizing: border-box; 
 	text-decoration:none;
 	text-shadow:2px 2px 0px #e1e2ed;
+    white-space: nowrap; 
+    justify-content: center; 
+	align-items: center;
 }
 .categories:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
@@ -48,12 +53,12 @@ body {
 }
 .categories:active {
 	position:relative;
-	top:3px;
+	top:1px;
 }
 .categories-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-    gap: 1px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     padding: 1x;
@@ -66,7 +71,9 @@ body {
 <center>
 <hr>
 <div class="categories-container">
-<button class="categories">Blagues</button>
+<a href="https://daguy5134.github.io/blog/blagues" class="categories">Blagues</a>
+<a href="https://daguy5134.github.io/blog/enigmes" class="categories">Énigmes</a>
+<a href="https://daguy5134.github.io/blog/fun-facts" class="categories">Faits amusants</a>
 </div>
 </body>
 </html>
