@@ -55,20 +55,28 @@ Pinyin à carcactère
 Caractère à pinyin
 </button>
 <button class="options" onclick="optionChosen('character', 'translation')">
-Caracrère à traduction
+Caractère à traduction
 </button>
 <button class="options" onclick="optionChosen('translation', 'character')">
 Traduction à caractère 
 </button>
 </div>
 <div id="questionsDiv" style="display: none;">
+<h2 id="topic" style="font-size: 40px;">
+</h2> <!-- La question/l'énoncé (ex. c'est quoi le pinyin de ce mot?) -->
+<h3 id="subject">
+</h3><!-- Le mot donné -->
 </div>
 </center>
 <script>
-const home = document.getElementById("home")
-const questionsDiv = document.getElementById("questionsDiv")
+const home = document.getElementById("home");
+const questionsDiv = document.getElementById("questionsDiv");
+const topic = document.getElementById("topic"); // Voir commentaire HTML si confus
+const subject = document.getElementById("subject"); // Voir commentaire HTML si confus
 let give;
 let expect;
+let randomIndex;
+
 class word {
 	constructor (pinyin, character, translation){
     	this.pinyin = pinyin;
@@ -76,17 +84,29 @@ class word {
         this.translation = translation;
     }
 }
+goals = {
+	pinyin_to_character: "Ceci est le pinyin de quel charactère ?",
+    character_to_pinyin: "Quel est le pinyin de ce charactère ?",
+    character_to_translation: "Que signifie ce charactère ?",
+    translation_to_character: "Comment dit-on ceci en chinois ?"
+}
+
 wordArr = [
-	new word(zhōng, 中, milieu)
+	new word("zhōng", "中", "milieu")
 ]
 function optionChosen (given, target) {
 	home.style.display = "none";
     questionsDiv.style.display = "block";
     give = given;
     expect = target;
+    question();
 }
 function question () {
-	
+	goalKey = give + "_to_" + expect;
+	topic.innerHTML = goals[goalKey];
+    randomIndex = Math.floor(Math.random() * wordArr.length);
+    randomWord = wordArr[randomIndex];
+    subject.innerHTML = randomWord[give];
 }
 </script>
 </body>
