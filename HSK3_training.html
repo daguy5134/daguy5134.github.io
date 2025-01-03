@@ -40,6 +40,12 @@ body {
 	position:relative;
 	top:3px;
 }
+.subject {
+	font-size: 30px; 
+    border:1px solid white; 
+    display: inline-block;
+    padding: 10px;
+}
 </style>
 <body>
 <center>
@@ -64,8 +70,12 @@ Traduction à caractère
 <div id="questionsDiv" style="display: none;">
 <h2 id="topic" style="font-size: 40px;">
 </h2> <!-- La question/l'énoncé (ex. c'est quoi le pinyin de ce mot?) -->
-<h3 id="subject">
+<h3 id="subject" class="subject">
 </h3><!-- Le mot donné -->
+<form>
+<input type="text" placeholder="Réponse" required>
+<input type="submit" value="Valider">
+<form>
 </div>
 </center>
 <script>
@@ -99,11 +109,11 @@ function optionChosen (given, target) {
     questionsDiv.style.display = "block";
     give = given;
     expect = target;
+    goalKey = give + "_to_" + expect;
+	topic.innerHTML = goals[goalKey];
     question();
 }
 function question () {
-	goalKey = give + "_to_" + expect;
-	topic.innerHTML = goals[goalKey];
     randomIndex = Math.floor(Math.random() * wordArr.length);
     randomWord = wordArr[randomIndex];
     subject.innerHTML = randomWord[give];
@@ -111,4 +121,3 @@ function question () {
 </script>
 </body>
 </html>
-
