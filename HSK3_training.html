@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HSK3</title>
+</head>
+<style>
+body {
+	background-color: black;
+    color: white;
+}
+.options {
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:41px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Impact;
+	font-size:28px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:2px 2px 0px #263666;
+    margin: 10px;
+}
+.options:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.options:active {
+	position:relative;
+	top:3px;
+}
+</style>
+<body>
+<center>
+<header>
+<h1 style="font-size:60px;">Entraînement pour HSK 3</h1>
+</header>
+<h2 style="font-size: 40px; color: #CECECE;">Options :<h2>
+<button class="options">Pinyin à carcactère</button>
+<button class="options">Caractère à pinyin</button>
+<button class="options">Caracrère à traduction</button>
+<button class="options">Traduction à caractère </button>
+</center>
+<script>
+class word {
+	constructor (pinyin, character, translation){
+    	this.pinyin = pinyin;
+        this.character = character;
+        this.translation = translation;
+    }
+}
+wordArr = [
+	new word(zhōng, 中, milieu)
+]
+
+</script>
+</body>
+</html>
+
