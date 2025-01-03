@@ -4,6 +4,16 @@
 <title>HSK3</title>
 </head>
 <style>
+header {
+    padding:10px;
+    background-image: url("https://daguy5134.github.io/image/hsk3_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5); 
+    background-blend-mode: overlay;
+}
 body {
 	background-color: black;
     color: white;
@@ -33,16 +43,32 @@ body {
 </style>
 <body>
 <center>
+<div id="home" style="dislpay: block;">
 <header>
-<h1 style="font-size:60px;">Entraînement pour HSK 3</h1>
+<h1 style="font-size:60px; color: black;">Entraînement pour HSK 3</h1>
 </header>
 <h2 style="font-size: 40px; color: #CECECE;">Options :<h2>
-<button class="options">Pinyin à carcactère</button>
-<button class="options">Caractère à pinyin</button>
-<button class="options">Caracrère à traduction</button>
-<button class="options">Traduction à caractère </button>
+<button class="options" onclick="optionChosen('pinyin', 'character')">
+Pinyin à carcactère
+</button>
+<button class="options" onclick="optionChosen('character', 'pinyin')">
+Caractère à pinyin
+</button>
+<button class="options" onclick="optionChosen('character', 'translation')">
+Caracrère à traduction
+</button>
+<button class="options" onclick="optionChosen('translation', 'character')">
+Traduction à caractère 
+</button>
+</div>
+<div id="questionsDiv" style="display: none;">
+</div>
 </center>
 <script>
+const home = document.getElementById("home")
+const questionsDiv = document.getElementById("questionsDiv")
+let give;
+let expect;
 class word {
 	constructor (pinyin, character, translation){
     	this.pinyin = pinyin;
@@ -53,7 +79,15 @@ class word {
 wordArr = [
 	new word(zhōng, 中, milieu)
 ]
-
+function optionChosen (given, target) {
+	home.style.display = "none";
+    questionsDiv.style.display = "block";
+    give = given;
+    expect = target;
+}
+function question () {
+	
+}
 </script>
 </body>
 </html>
