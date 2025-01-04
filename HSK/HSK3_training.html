@@ -47,7 +47,21 @@ body {
     padding: 10px;
 }
 .icon-button {
-	
+	clip-path: circle(40% at center);
+    cursor:pointer;
+    width: 50px;
+    filter: invert(100%);
+    dispay: inline-block;
+    vertical-align: middle;
+    padding: 10px; 
+}
+.icon-button:hover {
+	width: 56px;
+    padding: 7px;
+}
+.icon-button:active {
+	position:relative;
+	top:3px;
 }
 </style>
 <body>
@@ -70,10 +84,12 @@ Character to translation
 Translation to character
 </button>
 </div>
-<img src="https://daguy5134.github.io/image/Back-Button.png" class="icon-button">
 <div id="questionsDiv" style="display: none;">
-<h2 id="topic" style="font-size: 40px;">
+<img src="https://daguy5134.github.io/image/Back-Button.png" class="icon-button" 
+onclick = "back()">
+<h2 id="topic" style="font-size: 40px; display: inline-block; vertical-align: middle;">
 </h2> <!-- La question/l'énoncé (ex. c'est quoi le pinyin de ce mot?) -->
+<br>
 <h3 id="subject" class="subject">
 </h3><!-- Le mot donné -->
 <form>
@@ -1093,6 +1109,10 @@ function optionChosen (given, target) {
     goalKey = give + "_to_" + expect;
 	topic.innerHTML = goals[goalKey];
     question();
+}
+function back () {
+	home.style.display = "block";
+    questionsDiv.style.display = "none";
 }
 function question () {
     randomIndex = Math.floor(Math.random() * wordArr.length);
