@@ -41,8 +41,8 @@ body {
 	top:3px;
 }
 .subject {
-	font-size: 30px; 
-    border:1px solid white; 
+	font-size: 30px;
+    border:1px solid white;
     display: inline-block;
     padding: 10px;
 }
@@ -73,8 +73,10 @@ Traduction à caractère
 <h3 id="subject" class="subject">
 </h3><!-- Le mot donné -->
 <form>
-<input type="text" placeholder="Réponse" required>
-<input type="submit" value="Valider">
+<input id="answerField" type="text" placeholder="Réponse" required>
+<input id="submitBtn"type="submit" value="Valider">
+<label for="answerField" id="correctingField" style="font-size: 25px; font-weight: bold;"></label>
+<input id="nextBtn" type="reset" value="Suivant" style="display: none; margin: 10px;">
 <form>
 </div>
 </center>
@@ -83,6 +85,9 @@ const home = document.getElementById("home");
 const questionsDiv = document.getElementById("questionsDiv");
 const topic = document.getElementById("topic"); // Voir commentaire HTML si confus
 const subject = document.getElementById("subject"); // Voir commentaire HTML si confus
+const answerField = document.getElementById("answerField");
+const correctField = document.getElementById("correctingField");
+const nextBtn = document.getElementById("nextBtn");
 let give;
 let expect;
 let randomIndex;
@@ -120,7 +125,23 @@ function question () {
 }
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); 
-    document.getElem
+    document.getElementById("submitBtn").style.display = "none";
+    nextBtn.style.display = "block";
+    let answer = answerField.value;
+    answerField.disabled = true;
+    if (answer === randomWord[expect]) {
+    	correctField.innerHTML = "✓";
+        correctField.style.color = "green";
+    } else {
+    	correctField.innerHTML = "✕ " + randomWord[expect];
+        correctField.style.color = "red";
+    }
+});
+document.querySelector('form').addEventListener('reset', function(event) {
+	correctField.innerHTML = "";
+    nextBtn.style.display = "none";
+    answerField.disabled = false;
+    question();
 });
 </script>
 </body>
