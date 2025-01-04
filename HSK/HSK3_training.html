@@ -46,6 +46,9 @@ body {
     display: inline-block;
     padding: 10px;
 }
+.icon-button {
+	
+}
 </style>
 <body>
 <center>
@@ -55,7 +58,7 @@ body {
 </header>
 <h2 style="font-size: 40px; color: #CECECE;">Options :<h2>
 <button class="options" onclick="optionChosen('pinyin', 'character')">
-Pinyin to cHarcactr	
+Pinyin to charcacter	
 </button>
 <button class="options" onclick="optionChosen('character', 'pinyin')">
 Character to pinyin
@@ -67,16 +70,17 @@ Character to translation
 Translation to character
 </button>
 </div>
+<img src="https://daguy5134.github.io/image/Back-Button.png" class="icon-button">
 <div id="questionsDiv" style="display: none;">
 <h2 id="topic" style="font-size: 40px;">
 </h2> <!-- La question/l'énoncé (ex. c'est quoi le pinyin de ce mot?) -->
 <h3 id="subject" class="subject">
 </h3><!-- Le mot donné -->
 <form>
-<input id="answerField" type="text" placeholder="Réponse" required>
-<input id="submitBtn"type="submit" value="Valider">
+<input id="answerField" type="text" placeholder="Answer" required>
+<input id="submitBtn"type="submit" value="Submit">
 <label for="answerField" id="correctingField" style="font-size: 25px; font-weight: bold;"></label>
-<input id="nextBtn" type="reset" value="Suivant" style="display: none; margin: 10px;">
+<input id="nextBtn" type="reset" value="Next" style="display: none; margin: 10px;">
 <form>
 </div>
 </center>
@@ -100,10 +104,10 @@ class Word {
     }
 }
 goals = {
-	pinyin_to_character: "Ceci est le pinyin de quel charactère ?",
-    character_to_pinyin: "Quel est le pinyin de ce charactère ?",
-    character_to_translation: "Que signifie ce charactère ?",
-    translation_to_character: "Comment dit-on ceci en chinois ?"
+	pinyin_to_character: "Write the character of this pinyin",
+    character_to_pinyin: "Write the pinyin of this character",
+    character_to_translation: "What does this mean ?",
+    translation_to_character: "Translate this to chinese"
 }
 
 wordArr = [
@@ -1101,7 +1105,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     nextBtn.style.display = "block";
     let answer = answerField.value;
     answerField.disabled = true;
-    if (answer === randomWord[expect]) {
+    if (answer.toLowerCase().replace(/\s/g, '') === randomWord[expect].toLowerCase().replace(/\s/g, '')) {
     	correctField.innerHTML = "✓";
         correctField.style.color = "green";
     } else {
