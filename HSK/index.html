@@ -20,6 +20,7 @@ body {
 	font-size:25px;
 	font-weight:bold;
 	padding:6px 13px;
+    margin: 5px;
 	text-decoration:none;
 	text-shadow:3px 3px 0px #263666;
 }
@@ -49,13 +50,23 @@ footer {
 <hr>
 <a href="https://daguy5134.github.io/HSK/HSK2_training" class="pages">HSK 2</a>
 <a href="https://daguy5134.github.io/HSK/HSK3_training" class="pages">HSK 3</a>
+<div id="devOptions"style="display:none;">
+<a href="https://daguy5134.github.io/HSK/HSK3_wordList.js" class="pages">HSK 2 word list</a>
+<a href="https://daguy5134.github.io/HSK/HSK3_wordList.js" class="pages">HSK 3 word list</a>
+<a href="https://daguy5134.github.io/HSK/convertHTMLtoJS.html" class="pages">HTML to JS converter</a>
+</div>
 </center>
 </div>
 <footer>
 &copy; 2024-2025 daguy5134. All rights reserved. 
-<a onclick>
+<a onclick="dev()" href="#">
 About.
 </a>
 </footer>
 </body>
+<script>
+function dev () {
+	document.getElementById("devOptions").style.display = "inline-block";
+}
+</script>
 </html> 
