@@ -22,7 +22,7 @@ body {margin:0;}
   background: #ddd;
   color: black;
 }
-.navbar.active {
+.navbar a.active {
   background-color: #04AA6D;
   color: white;
 }
