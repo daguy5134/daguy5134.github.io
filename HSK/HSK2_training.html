@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HSK2</title>
+<link rel="stylesheet" type="text/css" href="https://daguy5134.github.io/HSK/icon-bar.css">
+</head>
+<style>
+header {
+    padding:10px;
+    background-image: url("https://daguy5134.github.io/image/hsk2_bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5); 
+    background-blend-mode: overlay;
+}
+body {
+	background-color: black;
+    color: white;
+}
+.options {
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:41px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Impact;
+	font-size:28px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:2px 2px 0px #263666;
+    margin: 10px;
+}
+.options:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.options:active {
+	position:relative;
+	top:3px;
+}
+.subject {
+	font-size: 30px;
+    border:1px solid white;
+    display: inline-block;
+    padding: 10px;
+}
+.icon-button {
+	clip-path: circle(40% at center);
+    cursor:pointer;
+    width: 50px;
+    filter: invert(100%);
+    dispay: inline-block;
+    vertical-align: middle;
+    padding: 10px; 
+}
+.icon-button:hover {
+	width: 56px;
+    padding: 7px;
+}
+.icon-button:active {
+	position:relative;
+	top:3px;
+}
+</style>
+<body>
+<center>
+<div id="home" style="dislpay: block;">
+<div class="topnav">
+  <a href="https://daguy5134.github.io/HSK/HSK2_training" class="active">HSK 2</a>
+  <a href="https://daguy5134.github.io/HSK/HSK3_training">HSK 3</a>
+</div>
+<header>
+<h1 style="font-size:60px; color: black;">Training for HSK 2</h1>
+</header>
+<h2 style="font-size: 40px; color: #CECECE;">Options :<h2>
+<button class="options" onclick="optionChosen('pinyin', 'character')">
+Pinyin to charcacter	
+</button>
+<button class="options" onclick="optionChosen('character', 'pinyin')">
+Character to pinyin
+</button>
+<button class="options" onclick="optionChosen('character', 'translation')">
+Character to translation
+</button>
+<button class="options" onclick="optionChosen('translation', 'character')">
+Translation to character
+</button>
+</div>
+<div id="questionsDiv" style="display: none;">
+<img src="https://daguy5134.github.io/image/Back-Button.png" class="icon-button" 
+onclick = "back()">
+<h2 id="topic" style="font-size: 40px; display: inline-block; vertical-align: middle;">
+</h2> <!-- La question/l'énoncé (ex. c'est quoi le pinyin de ce mot?) -->
+<br>
+<h3 id="subject" class="subject">
+</h3><!-- Le mot donné -->
+<form id="myForm">
+<input id="answerField" type="text" placeholder="Answer">
+<input id="submitBtn"type="submit" value="Submit">
+<label for="answerField" id="correctingField" style="font-size: 25px; font-weight: bold;"></label>
+<input id="nextBtn" type="reset" value="Next" style="display: none; margin: 10px;">
+</form>
+<p id="details" class="subject" style="display:none;"></p> <!--Box that appears and gives more info about the word-->
+</div>
+</center>
+<script src="https://daguy5134.github.io/HSK/HSK2_wordList.js"></script>
+<script>
+const home = document.getElementById("home");
+const questionsDiv = document.getElementById("questionsDiv");
+const myForm = document.getElementById("myForm"); 
+const topic = document.getElementById("topic"); // Voir commentaire HTML si confus
+const subject = document.getElementById("subject"); // Voir commentaire HTML si confus
+const answerField = document.getElementById("answerField");
+const correctField = document.getElementById("correctingField");
+const nextBtn = document.getElementById("nextBtn");
+const details = document.getElementById("details");
+let give;
+let expect;
+let randomIndex;
+
+goals = {
+	pinyin_to_character: "Write the character of this pinyin",
+    character_to_pinyin: "Write the pinyin of this character",
+    character_to_translation: "What does this mean ?",
+    translation_to_character: "Translate this to chinese"
+}
+
+function optionChosen (given, target) {
+	home.style.display = "none";
+    questionsDiv.style.display = "block";
+    give = given;
+    expect = target;
+    goalKey = give + "_to_" + expect;
+	topic.innerHTML = goals[goalKey];
+    question();
+}
+function back () {
+	home.style.display = "block";
+    questionsDiv.style.display = "none";
+    myReset();
+}
+function question () {
+    randomIndex = Math.floor(Math.random() * wordArr.length);
+    randomWord = wordArr[randomIndex];
+    subject.innerHTML = randomWord[give];
+}
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    document.getElementById("submitBtn").style.display = "none";
+    nextBtn.style.display = "block";
+    let answer = answerField.value;
+    answerField.disabled = true;
+    if (answer.toLowerCase().replace(/\s/g, '') === randomWord[expect].toLowerCase().replace(/\s/g, '')) {
+    	correctField.innerHTML = "✓";
+        correctField.style.color = "green";
+    } else {
+    	correctField.innerHTML = "✕ " + randomWord[expect];
+        correctField.style.color = "red";
+    }
+    details.style.display = "inline-block";
+    details.innerHTML = `Character : ${randomWord.character}<br>Pinyin : ${randomWord.pinyin}<br>Meaning : ${randomWord.translation}`;
+    document.addEventListener('keydown', enterListener);
+});
+function enterListener (event) {
+	if (event.key === "Enter") {
+        	myReset();
+    }
+}
+function myReset () {
+details.style.display = "none";
+	correctField.innerHTML = "";
+    myForm.reset();
+    nextBtn.style.display = "none";
+    document.getElementById("submitBtn").style.display = "inline-block";
+    answerField.disabled = false;
+    question();
+    document.removeEventListener('keydown', enterListener);
+}
+document.querySelector('form').addEventListener('reset', function(event) {
+	myReset();
+});
+</script>
+</body>
+</html>
