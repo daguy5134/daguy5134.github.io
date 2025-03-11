@@ -15,7 +15,7 @@ wordArr = [
 	new Word('bā', '八', 'Eight'),
 	new Word('bǎ', '把', 'hold'),
 	new Word('bàba', '爸爸', 'Dad'),
-	new Word('ba', '吧', ''),
+	new Word('ba', '吧', "Let's"),
 	new Word('bái', '白', 'white'),
 	new Word('bǎi', '百', 'hundred'),
 	new Word('bān', '班', 'class'),
