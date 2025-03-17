@@ -319,7 +319,7 @@ wordArr = [
 	new Word('nǎinai', '奶奶', 'grandma'),
 	new Word('nán', '南', 'south'),
 	new Word('nánrén', '男人', 'Man'),
-	new Word('nán', '难', 'disaster; blame'),
+	new Word('nán', '难', 'difficult'),
 	new Word('nánguò', '难过', 'Sorry'),
 	new Word('ne', '呢', 'question particle for subjects already mentioned'),
 	new Word('néng', '能', 'can'),
