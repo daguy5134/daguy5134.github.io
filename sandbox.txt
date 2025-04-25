@@ -1,0 +1,10 @@
+
+onclick='window.location.href = "https://www.example.com";'
+
+
+  <ol>
+  		<li>bonjour</li>
+  		<li>coucou</li>
+  		<li>salut</li>
+	</ol>
+
